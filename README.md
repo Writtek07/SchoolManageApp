@@ -5,7 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 3.2.1
+* Node version - v18.15.0
 
 * System dependencies
 
