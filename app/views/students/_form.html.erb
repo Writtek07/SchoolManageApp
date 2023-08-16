@@ -1,0 +1,57 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :admission_number, style: "display: block" %>
+    <%= form.number_field :admission_number %>
+  </div>
+
+  <div>
+    <%= form.label :phone_number, style: "display: block" %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div>
+    <%= form.label :father_name, style: "display: block" %>
+    <%= form.text_field :father_name %>
+  </div>
+
+  <div>
+    <%= form.label :mothers_name, style: "display: block" %>
+    <%= form.text_field :mothers_name %>
+  </div>
+
+  <div>
+    <%= form.label :dob, style: "display: block" %>
+    <%= form.date_field :dob %>
+  </div>
+
+  <div>
+    <%= form.label :date_of_admission, style: "display: block" %>
+    <%= form.date_field :date_of_admission %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
