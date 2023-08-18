@@ -11,47 +11,48 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+  <div class="w-full">
+    <%= form.label :first_name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :first_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+  <div class="w-full mt-3">
+    <%= form.label :last_name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :last_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :admission_number, style: "display: block" %>
-    <%= form.number_field :admission_number %>
+  <div class="w-full mt-3">
+    <%= form.label :admission_number, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.number_field :admission_number, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :phone_number, style: "display: block" %>
-    <%= form.text_field :phone_number %>
+  <div class="w-full mt-3">
+    <%= form.label :phone_number, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.number_field :phone_number, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :father_name, style: "display: block" %>
-    <%= form.text_field :father_name %>
+  <div class="w-full mt-3">
+    <%= form.label :father_name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :father_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :mothers_name, style: "display: block" %>
-    <%= form.text_field :mothers_name %>
+  <div class="w-full mt-3">
+    <%= form.label :mothers_name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :mothers_name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :dob, style: "display: block" %>
-    <%= form.date_field :dob %>
+  <div class="w-full mt-3">
+    <%= form.label :dob, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.date_field :dob, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :date_of_admission, style: "display: block" %>
-    <%= form.date_field :date_of_admission %>
+  <div class="w-full mt-3">
+    <%= form.label :date_of_admission, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.date_field :date_of_admission, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="inline-flex rounded-md shadow-sm mt-4 mb-2" role="group">
+    <%= form.submit class: "inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-l-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700" %>    
+    <%= link_to "Back to students", students_path , class: "px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-r-md hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700" %>
   </div>
 <% end %>

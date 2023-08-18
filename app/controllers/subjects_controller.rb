@@ -65,6 +65,6 @@ class SubjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def subject_params
-      params.require(:subject).permit(:name, :teacher_id)
+      params.require(:subject).permit(:name, :grade_id, :teacher_id)
     end
 end

@@ -14,8 +14,9 @@ class AttendancesTest < ApplicationSystemTestCase
     visit attendances_url
     click_on "New attendance"
 
-    fill_in "Date of record", with: @attendance.date_of_record
+    fill_in "Attendance date", with: @attendance.attendance_date
     fill_in "Grade", with: @attendance.grade_id
+    check "Status" if @attendance.status
     fill_in "Student", with: @attendance.student_id
     click_on "Create Attendance"
 
@@ -27,8 +28,9 @@ class AttendancesTest < ApplicationSystemTestCase
     visit attendance_url(@attendance)
     click_on "Edit this attendance", match: :first
 
-    fill_in "Date of record", with: @attendance.date_of_record
+    fill_in "Attendance date", with: @attendance.attendance_date
     fill_in "Grade", with: @attendance.grade_id
+    check "Status" if @attendance.status
     fill_in "Student", with: @attendance.student_id
     click_on "Update Attendance"
 
