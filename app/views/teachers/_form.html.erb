@@ -11,23 +11,18 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="w-full mt-3">
+    <%= form.label :name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :name, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :is_class_teacher, style: "display: block" %>
-    <%= form.check_box :is_class_teacher %>
-  </div>
-  
-
-  <div>
-    <%= form.label :grade_id, style: "display: block" %>
-    <%= form.text_field :grade_id %>
+  <div class="w-full mt-3">
+    <%= form.label :grade_id, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :grade_id, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="inline-flex rounded-md shadow-sm mt-4 mb-2" role="group">
+    <%= form.submit class: "inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-l-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700" %>    
+    <%= link_to "Back to Teacher", teachers_path , class: "px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-r-md hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700" %>
   </div>
 <% end %>

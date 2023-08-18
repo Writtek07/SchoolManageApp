@@ -14,9 +14,8 @@ class MarksTest < ApplicationSystemTestCase
     visit marks_url
     click_on "New mark"
 
-    fill_in "Attained", with: @mark.attained
-    fill_in "Class", with: @mark.class_id
-    fill_in "Max attainable", with: @mark.max_attainable
+    fill_in "Marks obtained", with: @mark.marks_obtained
+    fill_in "Max marks", with: @mark.max_marks
     fill_in "Student", with: @mark.student_id
     fill_in "Subject", with: @mark.subject_id
     click_on "Create Mark"
@@ -29,9 +28,8 @@ class MarksTest < ApplicationSystemTestCase
     visit mark_url(@mark)
     click_on "Edit this mark", match: :first
 
-    fill_in "Attained", with: @mark.attained
-    fill_in "Class", with: @mark.class_id
-    fill_in "Max attainable", with: @mark.max_attainable
+    fill_in "Marks obtained", with: @mark.marks_obtained
+    fill_in "Max marks", with: @mark.max_marks
     fill_in "Student", with: @mark.student_id
     fill_in "Subject", with: @mark.subject_id
     click_on "Update Mark"

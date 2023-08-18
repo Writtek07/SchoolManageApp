@@ -2,12 +2,8 @@
 
 one:
   name: MyString
-  is_class_teacher: false
-  section: one
   grade: one
 
 two:
   name: MyString
-  is_class_teacher: false
-  section: two
   grade: two

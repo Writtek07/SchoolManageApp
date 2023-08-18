@@ -1,9 +1,9 @@
-<h1>New grade</h1>
-
-<%= render "form", grade: @grade %>
-
-<br>
-
-<div>
-  <%= link_to "Back to grades", grades_path %>
+<div class="bg-white dark:bg-gray-900 h-screen">
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+      <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Add a new Grade</h2>
+      <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+        <%= render "form", grade: @grade %>
+      </div>
+      <%# link_to "Back to students", students_path , class: "w-full py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"%>        
+    </div>
 </div>

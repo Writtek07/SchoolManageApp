@@ -14,6 +14,7 @@ class SubjectsTest < ApplicationSystemTestCase
     visit subjects_url
     click_on "New subject"
 
+    fill_in "Grade", with: @subject.grade_id
     fill_in "Name", with: @subject.name
     fill_in "Teacher", with: @subject.teacher_id
     click_on "Create Subject"
@@ -26,6 +27,7 @@ class SubjectsTest < ApplicationSystemTestCase
     visit subject_url(@subject)
     click_on "Edit this subject", match: :first
 
+    fill_in "Grade", with: @subject.grade_id
     fill_in "Name", with: @subject.name
     fill_in "Teacher", with: @subject.teacher_id
     click_on "Update Subject"

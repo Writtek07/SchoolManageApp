@@ -65,6 +65,6 @@ class GradesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def grade_params
-      params.require(:grade).permit(:class_name_id, :class_teacher)
+      params.require(:grade).permit(:name)
     end
 end

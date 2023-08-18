@@ -15,9 +15,7 @@ class TeachersTest < ApplicationSystemTestCase
     click_on "New teacher"
 
     fill_in "Grade", with: @teacher.grade_id
-    check "Is class teacher" if @teacher.is_class_teacher
     fill_in "Name", with: @teacher.name
-    fill_in "Section", with: @teacher.section_id
     click_on "Create Teacher"
 
     assert_text "Teacher was successfully created"
@@ -29,9 +27,7 @@ class TeachersTest < ApplicationSystemTestCase
     click_on "Edit this teacher", match: :first
 
     fill_in "Grade", with: @teacher.grade_id
-    check "Is class teacher" if @teacher.is_class_teacher
     fill_in "Name", with: @teacher.name
-    fill_in "Section", with: @teacher.section_id
     click_on "Update Teacher"
 
     assert_text "Teacher was successfully updated"

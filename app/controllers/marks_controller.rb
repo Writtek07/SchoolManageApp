@@ -65,6 +65,6 @@ class MarksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mark_params
-      params.require(:mark).permit(:max_attainable, :attained, :class_id, :student_id, :subject_id)
+      params.require(:mark).permit(:student_id, :subject_id, :marks_obtained, :max_marks)
     end
 end

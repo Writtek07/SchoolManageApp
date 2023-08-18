@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  teacher_id: 1
+  grade: one
+  teacher: one
 
 two:
   name: MyString
-  teacher_id: 1
+  grade: two
+  teacher: two

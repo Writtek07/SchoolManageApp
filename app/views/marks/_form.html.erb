@@ -11,32 +11,28 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :max_attainable, style: "display: block" %>
-    <%= form.number_field :max_attainable %>
+  <div class="w-full">
+    <%= form.label :student_id, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :student_id, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :attained, style: "display: block" %>
-    <%= form.number_field :attained %>
+  <div class="w-full mt-3">
+    <%= form.label :subject_id, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.text_field :subject_id, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :class_id, style: "display: block" %>
-    <%= form.number_field :class_id %>
+  <div class="w-full mt-3"> 
+    <%= form.label :marks_obtained, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.number_field :marks_obtained, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :student_id, style: "display: block" %>
-    <%= form.number_field :student_id %>
+  <div class="w-full mt-3">
+    <%= form.label :max_marks, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= form.number_field :max_marks, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
   </div>
 
-  <div>
-    <%= form.label :subject_id, style: "display: block" %>
-    <%= form.text_field :subject_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="inline-flex rounded-md shadow-sm mt-4 mb-2" role="group">
+    <%= form.submit class: "inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-l-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700" %>    
+    <%= link_to "Back to Marks", marks_path , class: "px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-r-md hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700" %>
   </div>
 <% end %>

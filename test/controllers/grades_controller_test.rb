@@ -17,7 +17,7 @@ class GradesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create grade" do
     assert_difference("Grade.count") do
-      post grades_url, params: { grade: { class_name_id: @grade.class_name_id, class_teacher: @grade.class_teacher } }
+      post grades_url, params: { grade: { name: @grade.name } }
     end
 
     assert_redirected_to grade_url(Grade.last)
@@ -34,7 +34,7 @@ class GradesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update grade" do
-    patch grade_url(@grade), params: { grade: { class_name_id: @grade.class_name_id, class_teacher: @grade.class_teacher } }
+    patch grade_url(@grade), params: { grade: { name: @grade.name } }
     assert_redirected_to grade_url(@grade)
   end
 

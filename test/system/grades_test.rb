@@ -14,8 +14,7 @@ class GradesTest < ApplicationSystemTestCase
     visit grades_url
     click_on "New grade"
 
-    fill_in "Class name", with: @grade.class_name_id
-    fill_in "Class teacher", with: @grade.class_teacher
+    fill_in "Name", with: @grade.name
     click_on "Create Grade"
 
     assert_text "Grade was successfully created"
@@ -26,8 +25,7 @@ class GradesTest < ApplicationSystemTestCase
     visit grade_url(@grade)
     click_on "Edit this grade", match: :first
 
-    fill_in "Class name", with: @grade.class_name_id
-    fill_in "Class teacher", with: @grade.class_teacher
+    fill_in "Name", with: @grade.name
     click_on "Update Grade"
 
     assert_text "Grade was successfully updated"

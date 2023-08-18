@@ -1,9 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  class_name: one
-  class_teacher: 1
+  name: MyString
 
 two:
-  class_name: two
-  class_teacher: 1
+  name: MyString
