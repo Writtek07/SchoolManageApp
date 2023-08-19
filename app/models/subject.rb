@@ -1,5 +1,5 @@
 class Subject < ApplicationRecord
   belongs_to :grade
-  belongs_to :teacher
+  has_and_belongs_to_many :teachers
   has_many :marks
 end

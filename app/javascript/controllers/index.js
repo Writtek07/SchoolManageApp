@@ -3,8 +3,9 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
-import ContentLoader from 'stimulus-content-loader'
+
+import ChainedSelectTeacherController from "./chained_select_teacher_controller"
+application.register("chained-select-teacher", ChainedSelectTeacherController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-application.register('content-loader', ContentLoader)
