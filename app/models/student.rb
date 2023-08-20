@@ -10,5 +10,10 @@ class Student < ApplicationRecord
     validates_numericality_of :admission_number, on: :create, message: "is not a number"
     validates_numericality_of :phone_number, on: :create, message: "is not a number"
     
-    
+    after_create :create_user
+
+
+    def create_user
+        User.create(email: email, password: "password", password_confirmation: "password", role: 1)
+    end
 end

@@ -11,8 +11,10 @@ class MarksController < ApplicationController
   end
 
   # GET /marks/new
-  def new
-    @mark = Mark.new
+  def new    
+    @student = Student.find(params[:student_id])
+    console
+    @mark = @student.marks.build
   end
 
   # GET /marks/1/edit
@@ -21,8 +23,9 @@ class MarksController < ApplicationController
 
   # POST /marks or /marks.json
   def create
-    @mark = Mark.new(mark_params)
-
+    # @mark = Mark.new(mark_params)
+    @student = Student.find(params[:student_id])
+    @mark = @student.marks.build(mark_params)    
     respond_to do |format|
       if @mark.save
         format.html { redirect_to mark_url(@mark), notice: "Mark was successfully created." }

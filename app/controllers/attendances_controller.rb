@@ -12,7 +12,9 @@ class AttendancesController < ApplicationController
 
   # GET /attendances/new
   def new
-    @attendance = Attendance.new
+    @student = Student.find(params[:student_id])
+    @attendance = @student.attendances.build
+    @grade = @student.grade
   end
 
   # GET /attendances/1/edit
@@ -21,13 +23,16 @@ class AttendancesController < ApplicationController
 
   # POST /attendances or /attendances.json
   def create
-    @attendance = Attendance.new(attendance_params)
+    @student = Student.find(params[:student_id])
+    @attendance = @student.attendances.build(attendance_params)
+    # @attendance = Attendance.new(attendance_params)
 
     respond_to do |format|
       if @attendance.save
         format.html { redirect_to attendance_url(@attendance), notice: "Attendance was successfully created." }
         format.json { render :show, status: :created, location: @attendance }
       else
+        @grade = @student.grade
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @attendance.errors, status: :unprocessable_entity }
       end
